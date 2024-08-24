@@ -3,29 +3,26 @@ variable "aws_region" {
   description = "AWS region to deploy resources"
   default     = "us-east-2"
 }
-
 variable "tf_state_bucket" {
   type        = string
   description = "Name of S3 bucket in AWS for storing terraform state"
   default     = "devops-recipe-app-gka-tf-state"
 }
-
 variable "tf_state_lock_table" {
   type        = string
   description = "Name of DynamoDB table for locking terraform state"
   default     = "devops-recipe-app-api-tf-lock"
 }
-
-variable "project" {
+variable "prefix" {
   type        = string
-  description = "Name of project"
+  description = "Prefix for resources in AWS"
+  default     = "raa"
+}
+variable "project" {
+  description = "Project name for tagging resources"
   default     = "recipe-app-api"
 }
-
 variable "contact" {
-  type        = string
-  description = "Contact email for project"
+  description = "Contact email for tagging resources"
   default     = "synergyplatinumgh@gmail.com"
 }
-
-
