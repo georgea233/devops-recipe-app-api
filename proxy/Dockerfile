@@ -26,4 +26,4 @@ USER nginx
 VOLUME /vol/static
 VOLUME /vol/media
 
-CMD ["/r
+CMD ["/run.sh"]
